@@ -1,5 +1,8 @@
 package uk.ac.brunel.cs1702;
 
+import uk.ac.brunel.cs1702.DrawShape.*;
+import uk.ac.brunel.cs1702.ZigZag.MainMode;
+
 import java.awt.Font;
 import java.awt.event.ActionEvent; 
 import java.awt.event.ActionListener;
@@ -10,16 +13,20 @@ import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.SwingUtilities;
 import javax.swing.UIManager;
+
+import org.apache.log4j.chainsaw.Main;
 
 import edu.cmu.ri.createlab.terk.robot.finch.Finch;
 
 	public class Assignment2 implements ActionListener
 	{
+		private static JFrame frame0;
 		private static String[] taskList = {"task 1: search for light", "task 2: draw shape", "task 3: navigation", "task 4: zig zag", "task 5: detect object", "task 6: dance"};
 		private static String selection="";
 		private static JComboBox<Array> selected;
-	    private static JButton selectButton;
+	    private static JButton selectButton, exitButton;
 	    //finch control
 	    //private static Finch myFinch = new Finch();// initisling finch
 	    
@@ -38,12 +45,13 @@ import edu.cmu.ri.createlab.terk.robot.finch.Finch;
 			try 
 			{ 
 			    UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-			} catch (Exception e) {
+			} catch (Exception e) 
+			{
 			    e.printStackTrace();
 			}
 			
 			//create frame
-	        JFrame frame0=new JFrame("Select a task!");  
+	        frame0=new JFrame("Select a task!");  
 			frame0.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 			//create panel and label
@@ -64,22 +72,25 @@ import edu.cmu.ri.createlab.terk.robot.finch.Finch;
 			//add action listener
 			selectButton.addActionListener(this);
 			
+			//create exit button
+			exitButton=new JButton("Exit");
+			exitButton.setFont(font);
+			exitButton.setActionCommand("Exit");
+			
 	        //add all elements to panel
 			p.add(l);
 			p.add(selected);
 	        p.add(selectButton); 
+	        p.add(exitButton);
 	        
 	        //add panel to frame
 			frame0.add(p);
-
 			//set frame bounds
 			frame0.setBounds(150,150,400,150);
 			//frame.pack();
 			frame0.setVisible(true);
-
 	}
 
-		@Override
 		public void actionPerformed(ActionEvent e) 
 		{
 			if(e.getActionCommand().equals("Select"))
@@ -93,27 +104,29 @@ import edu.cmu.ri.createlab.terk.robot.finch.Finch;
 				}
 				else if(selection == "task 2: draw shape")
 				{
+					
 				}
 				else if(selection == "task 3: navigation")
-				{
-					
+				{	
 				}
 				else if(selection == "task 4: zig zag")
-				{
-					
+				{	
 				}
 				else if(selection == "task 5: detect object")
-				{
-					
+				{	
 				}
 				else if(selection == "task 6: dance")
 				{
-					
 				}
 				else
 				{
 					System.out.println("An error occurred.");
 				}
+			}
+			
+			if(e.getActionCommand().equals("Exit"))
+			{
+				System.exit(0);
 			}
 		}
 
