@@ -3,6 +3,7 @@ import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
+import java.io.IOException;
 import java.lang.reflect.Array;
 import java.util.Random;
 import javax.swing.AbstractButton;
@@ -391,8 +392,14 @@ public class FinchControl extends JPanel implements ActionListener
 			//call on method to write log file
 			Main.writeToFile();
 			
-			System.exit(0);
-			
+			try 
+			{
+				uk.ac.brunel.cs1702.Assignment2.main(null);
+			} 
+			catch (IOException e1) 
+			{
+				System.out.println("An error occurred.");
+			}
 		}
 		
 	}

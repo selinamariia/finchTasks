@@ -20,7 +20,7 @@ public class Main
 	public static ArrayList <Integer> triangleCount = new ArrayList<Integer>();
 	public static ArrayList <Integer> rectangleCount = new ArrayList<Integer>();
 
-    public static void main(String[] args) throws IOException
+    public static void drawShapeMain() throws IOException
     {
     	//creates the GUI
     	 myFinch = new Finch();
