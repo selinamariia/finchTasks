@@ -104,7 +104,18 @@ import edu.cmu.ri.createlab.terk.robot.finch.Finch;
 				}
 				else if(selection == "task 2: draw shape")
 				{
-					
+					try 
+					{
+						//this code will hide the GUI 
+						frame0.setVisible(false);
+						frame0.dispose();
+						//this code calls on the draw shape main method to start the program
+						uk.ac.brunel.cs1702.DrawShape.Main.drawShapeMain();
+					} 
+					catch (IOException e1) 
+					{
+						System.out.println("An error occurred.");
+					}
 				}
 				else if(selection == "task 3: navigation")
 				{	
