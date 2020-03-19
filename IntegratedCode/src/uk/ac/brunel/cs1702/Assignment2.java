@@ -129,16 +129,11 @@ import edu.cmu.ri.createlab.terk.robot.finch.Finch;
 				}
 				else if(selection == "task 6: dance")
 				{
-				try
-				{
-				                //this code run the dance main method to execute the program
-				               uk.ac.brunel.cs1702.Dance.MainLayout.main();
-				}
-				catch (IOException e1) 
-					{
-					        //As try loop doesn't work then it throws an error and execute the catch loop
-						System.out.println("An error occurred.");
-					}
+				frame0.setVisible(false);
+				      frame0.dispose();
+				      MainLayout ml= new
+		                MainLayout();
+				           ml.main(null);
 				
 				}
 				else
