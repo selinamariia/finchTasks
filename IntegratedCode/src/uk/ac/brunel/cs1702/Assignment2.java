@@ -2,7 +2,8 @@ package uk.ac.brunel.cs1702;
 
 import uk.ac.brunel.cs1702.DrawShape.*;
 import uk.ac.brunel.cs1702.ZigZag.MainMode;
-import uk.ac.brunel.cs1702.Dance;
+import uk.ac.brunel.cs1702.Dance.MainLayout;
+import uk.ac.brunel.cs1702.DetectObject.*;
 
 import java.awt.Font;
 import java.awt.event.ActionEvent; 
