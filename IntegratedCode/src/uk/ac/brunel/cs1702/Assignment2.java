@@ -120,20 +120,25 @@ import edu.cmu.ri.createlab.terk.robot.finch.Finch;
 				}
 				else if(selection == "task 3: navigation")
 				{	
-				}
+					String[] args = {};
+					uk.ac.brunel.cs1702.ZigZag.MainMode.main(args);
+;				}
 				else if(selection == "task 4: zig zag")
 				{	
 				}
 				else if(selection == "task 5: detect object")
 				{	
+					frame0.setVisible(false);
+					frame0.dispose();
+					
+					System.out.println("Detect Object selected");
+					GUI_task task = new GUI_task();
+
 				}
 				else if(selection == "task 6: dance")
 				{
-				frame0.setVisible(false);
-				      frame0.dispose();
-				      MainLayout ml= new
-		                MainLayout();
-				           ml.main(null);
+					System.out.println("Dance selected");
+					MainLayout mainFrame = new MainLayout();
 				
 				}
 				else
