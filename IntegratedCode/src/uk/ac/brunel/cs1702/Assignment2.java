@@ -2,6 +2,7 @@ package uk.ac.brunel.cs1702;
 
 import uk.ac.brunel.cs1702.DrawShape.*;
 import uk.ac.brunel.cs1702.ZigZag.MainMode;
+import uk.ac.brunel.cs1702.Dance;
 
 import java.awt.Font;
 import java.awt.event.ActionEvent; 
